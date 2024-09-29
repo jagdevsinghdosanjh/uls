@@ -12,10 +12,10 @@ if (!isset($_SESSION['username'])) {
 </head>
 <body>
     <h2>Welcome, <?php echo $_SESSION['username']; ?>!</h2>
-    Successfully Logged in on:<?php
+    Successfully Logged in @<?php
 // Return current date from the remote server
-$today = date("d/m/Y");
-echo $today;
+$timestamp = time();
+echo(date("F d, Y h:i:s", $timestamp));
 ?>
     <p><a href="logout.php">Logout</a></p>
 </body>
